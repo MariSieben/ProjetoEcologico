@@ -1,0 +1,129 @@
+#page-home {
+  height: 100vh; /*altura*/
+  background: url('../assets/home-background.svg') no-repeat; /*vai procurar a imagem*/
+  background-position: 35vw 20vh; /*largura*/
+}
+
+#page-home .content {
+  width: 90%; /*px é uma unidade fixa */
+  max-width: 1100px;
+  height: 100%;
+
+  margin: 0 auto;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+#page-home header{
+
+  margin-top: 48px; /*espaço na linha de cima*/
+
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*colocar em "line"*/
+#page-home header a{
+  display: flex; /*para os elementos ficarem um ao lado do outro*/
+  
+  color: var(--title-color); /*cor do texto*/
+  font-weight: 700; /*peso da fonte*/
+
+}
+
+/*procura o elemento no index*/
+#page-home header a span{
+   margin-right: 16px; /*lado direito*/
+   display: flex; /*mostra a imagem no fundo*/
+
+   background-image: url('../assets/log-in.svg');
+   
+   width: 20px;
+   height: 20px;
+}
+
+#page-home main {
+  max-width: 560px; /*largura máxima*/
+
+  flex: 1; /*vai pegar o tamanho da header e do main*/
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+#page-home main h1 {
+  font-size: 54px;
+}
+
+#page-home main p {
+  font-size: 24px; /*muda o tamanho da fonte*/
+  line-height: 38px; /*altura da linha do texto*/
+  margin-top: 24px; /*separação do texto de cima*/
+}
+
+/*configuração do botão "a"*/
+#page-home main a{
+  width: 100%; /*largura*/
+  max-width: 360px;
+  height: 72px; /*altura*/
+
+  border-radius: 8px; /*arredondamento do botão*/
+
+  display: flex;
+  align-items: center; /*alinhar ao centro o texto*/
+
+  margin-top: 40px;
+
+  background-color: var(--primary-color);
+
+  transition: 400ms; /*tempo que muda a cor do botão, fica mais suave*/
+  
+  /*font-weight: bold; peso do texto do botão(retirado pois strong já possui*/
+
+  /*color: white; /*cor do texto do botão(strong já possui)*/
+}
+
+/*quando passar o mouse pelo botão para ele mudar de cor:*/
+#page-home main a:hover{
+  background-color: #2fb86e;
+}
+ 
+/*para deixar o texto do botão na posição correta*/
+#page-home main a span {
+  width: 72px;
+  height:72px;
+  
+  /*deixa a borda totalmente redonda sem sobrar nada*/
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  
+  /*mudar a cor do botão do lado esquerdo*/
+  background-color: rgba(0, 0, 0, 0.08); /*alfa é a transparência*/
+
+  /*colocar o display do after aqui*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*criação de pseudo elementos que não existem no html:*/
+#page-home main a span::after { 
+  content: "";
+  background-image: url('../assets/search.svg');
+
+  width: 20px;
+  height: 20px;
+}
+ 
+/*segunda caixa do texto do botão*/
+#page-home main a strong {
+  flex: 1;
+  color: white;
+  text-align: center; /*alinhou o texto do botão no centro*/
+}

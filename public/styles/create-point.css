@@ -1,0 +1,198 @@
+/*Segunda página CSS*/
+#page-create-point {
+  width: 90%; /*largura*/
+  max-width: 1100px;
+  /*Alinhamento de caixa(lado de fora)*/
+  margin: 0 auto;
+}
+
+#page-create-point header {
+  margin-top: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-create-point header a {
+  color: var(--title-color);
+  font-weight: bold;
+  /*alinhar a seta com o texto lado a lado:*/
+  display: flex;
+  /*alinhar a seta com o texto ao centro*/
+  align-items: center;
+}
+
+/*colocação da "seta"*/
+#page-create-point header a span {
+  /*colocação de espaço entre a seta e o texto:*/
+  margin-right: 16px;
+   
+  background-image: url('../assets/arrow-left.svg');
+
+  display: flex;
+
+  width: 20px;
+  height: 24px;
+  
+}
+/*Criação do css do formulario*/
+form {
+  background-color: white;
+  margin: 80px auto;
+  /*Espaço entre o texto de cima com o form:*/
+  /* margin-top: 80px;*/
+
+  /*Preenchimento interno da caixa:*/
+  padding: 64px;
+  /*borda redonda*/
+  border-radius: 8px;
+  /*diminuir o formulario*/
+  max-width: 730px;
+
+}
+/*Estilização dos dados da caixa:*/
+form h1 {
+  font-size: 36px;
+}
+
+form fieldset {
+  margin-top: 64px;
+
+  border:0;
+}
+
+form legend {
+  margin-bottom: 40px; /*separação dos "dados da entidade" com os outros campos*/
+   
+  display: flex; /*itens de coleta*/
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+}
+
+form legend h2 {
+  font-size: 24px;
+}
+
+form legend span {
+  font-size: 14px;
+  color: var(--title-color);
+}
+
+form .field {
+  flex: 1; /*para esticar*/
+
+  display: flex; /*um elemento ao lado do outro*/
+  flex-direction: column; /*esticou os campos*/
+
+  margin-bottom: 24px; /*entre as div's field's*/
+}
+
+form .field-group {
+  display: flex;
+}
+
+form input,
+form select {
+  background-color: #f0f0f5;
+
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+
+  border-radius: 8px;
+
+  /*caso querer tirar as linhas pretas da borda quando escrever:*/
+  /*outline: none;*/
+
+}
+
+/*retirar os padrões dos navegadores de estilização própria deles*/
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+/*separar os campos do lado que estão juntos:*/
+form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+form button {
+  width: 260px;
+  height: 56px;
+
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  /*texto do botão:*/
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+
+  border: 0; /*sem borda*/
+  
+  margin-top: 40px; /*separar o botão mais*/
+
+  transition: background-color 400ms; /*somente "transition" aplica para tudo*/
+}
+
+form button:hover{
+  background-color: #2fb86e
+}
+/*Estilização ítens de coleta:*/
+.items-grid{
+  display: grid; /*para fazer 3 colunas e 2 linhas*/
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px; /*espaçamento dos itens*/
+}
+
+.items-grid li{
+  background-color: #f5f5f5;
+  list-style: none; /*tirar os "pontinhos" que tem na lista*/
+
+  border: 2px solid #f5f5f5;
+  border-radius: 8px;
+
+  height: 180px;
+
+  padding: 32px 24px 16px;
+
+  display: flex; /*alinhar os elementos*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: center; /*alinhar os textos*/
+
+  cursor: pointer; /*aparecer a mão do mouse*/
+}
+
+.items-grid li span {
+  margin-top: 12px; /*separação do topo*/
+
+  flex: 1; /*tamanho que se preenche sozinho*/
+
+  /*mudar o posicionamento*/
+  display: flex;
+  align-items: center;
+  
+  color: var(--title-color);
+}
+
+.items-grid li.selected{
+  background: #e1faec;
+  border: 2px solid #34cb79;
+}
+/*para ler somente o Id do elemento:*/
+.items-grid li img,
+.items-grid li span {
+  pointer-events: none;
+}

@@ -1,0 +1,53 @@
+/* Trabalhar estilisações do html */
+
+/*root: referenciando a raiz do documento*/
+:root {
+  --title-color: #322153; /*pode repetir cor, muda para todos que tiver colocado*/
+  --primary-color: #34cb79;
+}
+
+/* "*": referencia todos os seletores */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*comportamento padrão*/
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background: #f0f0f5; /*cor de fundo, cor gelo */
+  -webkit-font-smoothing: antialiased; /*para melhor visualização*/
+}
+  /*para tirar de todos os elementos "a" o sublinhado*/
+a {
+  text-decoration: none; /*tirar a linha de baixo*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Ubuntu, sans-serif;
+  color: var(--title-color);
+}
+
+/*box mode
+
+Modelo de caixa
+Toda caixa tem
+Largura, altura, espaçamentos, preenchimentos
+bordas, cor, fundo, maneira que é vista pelo html(display)
+alinhamentos
+*/
+
+
+
+
+
+
+/* "." É Uma referência para uma classe 
+.red {
+   background-color: red;
+}
+*/
+
